@@ -1,6 +1,6 @@
 # Created by https://www.gitignore.io/api/osx,vim,linux,emacs,python,windows,pycharm+all
 
-### Privacy Portal ###
+
 .aws-sam
 dependency-reduced-pom.xml
 out.txt
@@ -320,11 +320,3 @@ $RECYCLE.BIN/
 
 # Crash log files
 crash.log
-
-# End of https://www.gitignore.io/api/osx,vim,linux,emacs,python,windows,pycharm+all
-kubernetes/secret.yaml
-kubernetes/secret_preprod.yaml
-kubernetes/secret_dev.yaml
-kubernetes/secret_prod.yaml
-kubernetes/secret_qa.yaml
-kubernetes/secrets
