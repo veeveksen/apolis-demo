@@ -36,12 +36,12 @@ pipeline {
             }
         }
         stage('Docker deploy'){
-            def dockerrun='docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
+            def dockerRun = 'docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
           //  steps {
                 
                 sshagent(['production-server']) {
                     
-                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.85.132 ${dockerrun}'
+                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.85.132 ${dockerRun}'
                 }
                
                // sh 'docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
