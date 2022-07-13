@@ -47,11 +47,11 @@ pipeline {
                // sh 'docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
            }
         }
-        stage('Archving') { 
+      /*  stage('Archving') { 
             steps {
                  archiveArtifacts '**/target/*.jar'
             }
-        }
+        }*/
     }
 }
 
