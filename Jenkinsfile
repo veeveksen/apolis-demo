@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Docker deploy'){
             def dockerRun = 'docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
-          //  steps {
+            steps {
                 
                 sshagent(['production-server']) {
                     
@@ -45,7 +45,7 @@ pipeline {
                 }
                
                // sh 'docker run -itd -p  8081:8080 vivek87/apolis-demo:${BUILD_NUMBER}'
-          //  }
+           }
         }
         stage('Archving') { 
             steps {
