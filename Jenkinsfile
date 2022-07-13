@@ -22,7 +22,7 @@ pipeline {
                 sh 'docker build -t  vivek87/apolis-demo:${BUILD_NUMBER} .'
             }
         }
-        stage('Docker Login'){
+        stage('DockerLogin'){
             
             steps {
                  withCredentials([string(credentialsId: 'DockerId', variable: 'Dockerpwd')]) {
