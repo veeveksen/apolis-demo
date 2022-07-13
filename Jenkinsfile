@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // Run Maven on a Unix agent.
               
-                sh "mvn clean"
+                sh "mvn -X clean"
             }
         }
         stage('deploy') { 
