@@ -1,9 +1,5 @@
 pipeline {
     agent any 
-    tools {
-        maven "Maven 3.8.5"
-    
-    }
     stages {
         stage('Compile and Clean') { 
             steps {
@@ -21,7 +17,7 @@ pipeline {
         stage('Build Docker image'){
           
             steps {
-                echo "Hello Java Express"
+            
                 sh 'ls'
                 sh 'docker build -t  vivek87/apolis-demo:${BUILD_NUMBER} .'
             }
